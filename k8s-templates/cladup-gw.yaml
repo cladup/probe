@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: cladup-fanout-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    kubernetes.io/ingress.global-static-ip-name: "cladup-platform-static-ip"
+spec:
+  backend:
+    serviceName: objection
+    servicePort: 5000
+
