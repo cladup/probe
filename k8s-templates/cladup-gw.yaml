@@ -6,7 +6,15 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
     kubernetes.io/ingress.global-static-ip-name: "cladup-platform-static-ip"
 spec:
-  backend:
-    serviceName: objection
-    servicePort: 5000
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: objection
+          servicePort: 5000
+        path: /objection/*
+      - backend:
+          serviceName: hyperion
+          servicePort: 8080
+        path: /hyperion/*
 
