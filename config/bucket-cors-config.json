@@ -1,0 +1,8 @@
+[
+    {
+      "origin": ["http://clad-up.com", "http://clad-up.com:3000", "http://localhost:3000"],
+      "responseHeader": ["Content-Type"],
+      "method": ["GET", "HEAD"],
+      "maxAgeSeconds": 3600
+    }
+]
